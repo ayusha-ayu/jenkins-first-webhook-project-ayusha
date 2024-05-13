@@ -5,7 +5,7 @@ pipeline {
         stage('Run python code') {
             steps {
                 sh 'python --version'
-                sh 'python hello-wold.py'
+                sh 'python hello-world.py'
             }
         }
 
