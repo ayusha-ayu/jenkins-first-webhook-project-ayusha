@@ -2,31 +2,32 @@ pipeline {
     agent any
 
     stages {
-        stage('Compile') {
+        stage('Run python code') {
             steps {
-                echo "Compiling source code"
+                sh 'python --version'
+                sh 'python hello-wold.py'
             }
         }
 
-        stage('Unit Test') {
-            steps {
-//                sh "mvn test"
-                echo "Unit Test"
-            }
-        }
+//        stage('Unit Test') {
+//            steps {
+////                sh "mvn test"
+//                echo "Unit Test"
+//            }
+//        }
 
-        stage('Functional Test') {
-            steps {
-                echo "Running functional test"
-            }
-        }
+//        stage('Functional Test') {
+//            steps {
+//                echo "Running functional test"
+//            }
+//        }
 
-        stage('package jar') {
-            steps {
-//                sh 'mvn clean package'
-                echo "Packaging jar"
-
-            }
-        }
+//        stage('package jar') {
+//            steps {
+////                sh 'mvn clean package'
+//                echo "Packaging jar"
+//
+//            }
+//        }
     }
 }
